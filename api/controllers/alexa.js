@@ -16,7 +16,7 @@ response.updateDate = new Date();
 response.titleText = "Update For Bangalore Weather";
 
 
-  weather1.find({search: 'Bengaluru, KA', degreeType: 'C'}, function(err, result) {
+  weather1.find({search: 'Mumbai', degreeType: 'C'}, function(err, result) {
     if(err) {
       response.mainText = "hello from weather. we are facing technical issue right now. please try again sometime";
       response.redirectionUrl = "http://ramusiripalli.xyz";
@@ -36,7 +36,7 @@ response.titleText = "Update For Bangalore Weather";
     var day4weather = result[0].forecast[4].skytextday;
     console.log("fifth day weather " + day4weather);
     response.redirectionUrl = "http://ramusiripalli.xyz";
-    response.mainText = "Hello from weather. todays weather is expected to be " + day0weather + ".Tomorrows weather will be " +day1weather + ".third day weather will be " + day2weather + " . fourth day weather will be " + day3weather + "fifth day weather will be " + day4weather;
+    response.mainText = "Hello from weather. Todays weather is expected to be " + day0weather + ". Tomorrows weather will be " +day1weather + ". Third day weather will be " + day2weather + " . Fourth day weather will be " + day3weather + ". Fifth day weather will be " + day4weather;
     res.json(response);
     }
    
