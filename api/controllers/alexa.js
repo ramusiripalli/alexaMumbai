@@ -1,3 +1,4 @@
+
 'use strict';
 
 var util = require('util');
@@ -13,7 +14,7 @@ function weather(req,res){
 var response = {};
 response.uid = "urn:uuid:" + uuid.v4();
 response.updateDate = new Date();
-response.titleText = "Update For Bangalore Weather";
+response.titleText = "Update For Mumbai Weather";
 
 
   weather1.find({search: 'Mumbai', degreeType: 'C'}, function(err, result) {
